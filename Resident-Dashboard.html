@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Resident Dashboard</title><link rel="stylesheet" href="assets.css"></head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <h3>Citizen</h3>
+            <button id="logout-btn" class="btn secondary w-full" style="margin-top:auto;">Logout</button>
+        </aside>
+        <main class="main">
+            <header class="flex justify-between items-center mb-4">
+                <h1>Hello, <span id="resident-name-header">Citizen</span></h1>
+                <button id="create-request-btn" class="btn">New Request</button>
+            </header>
+            <div id="resident-requests"></div>
+        </main>
+    </div>
+
+    <div id="req-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Raise Request</h3>
+            <input id="req-type" placeholder="Issue Type (e.g., request Overflow)" />
+            <textarea id="req-desc" placeholder="Describe the issue..."></textarea>
+            <div class="flex mt-2"><button id="req-submit" class="btn w-full">Submit</button><button id="req-close" class="btn secondary w-full">Cancel</button></div>
+        </div>
+    </div>
+    <div id="rate-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Rate Work</h3>
+            <div class="flex justify-center" style="font-size:2rem; cursor:pointer;">
+                <span class="star" data-val="1">⭐</span><span class="star" data-val="2">⭐</span><span class="star" data-val="3">⭐</span><span class="star" data-val="4">⭐</span><span class="star" data-val="5">⭐</span>
+            </div>
+            <input type="hidden" id="rate-val" value="5">
+            <textarea id="rate-fb" placeholder="Feedback..."></textarea>
+            <div class="flex mt-2"><button id="rate-submit" class="btn w-full">Submit</button><button id="rate-close" class="btn secondary w-full">Cancel</button></div>
+        </div>
+    </div>
+    <script src="assets.js"></script>
+</body>
+</html>

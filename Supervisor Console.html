@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Supervisor Console</title><link rel="stylesheet" href="assets.css"></head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <h3>Supervisor</h3>
+            <nav>
+                <a href="#" id="nav-dash" class="nav-link active">Dashboard</a>
+                <a href="#" id="nav-res" class="nav-link">Citizens</a>
+                <a href="#" id="nav-work" class="nav-link">Workers</a>
+                <a href="#" id="nav-app" class="nav-link">Approvals</a>
+            </nav>
+            <button id="logout-btn" class="btn secondary w-full" style="margin-top:auto;">Logout</button>
+        </aside>
+        <main class="main">
+            <header><h1>Welcome, <span id="supervisor-name">Admin</span></h1></header>
+            
+            <div id="view-dash" class="view-section active-view fade-in">
+                <div class="grid-2" style="grid-template-columns: 2fr 1fr; gap: 1rem;">
+                    <div class="card">
+                        <h3>Incoming Requests</h3>
+                        <table id="requests-table"><thead><tr><th>Citizen</th><th>Type</th><th>Worker</th><th>Action</th><th>Rating & Feedback</th></tr></thead><tbody></tbody></table>
+                    </div>
+                    <div class="card">
+                        <h3>Worker Complaints</h3>
+                        <div id="complaints-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-res" class="view-section fade-in">
+                <div class="card"><h3>Citizens</h3><table id="residents-table"><thead><tr><th>Name</th><th>Phone</th><th>Address</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+            </div>
+
+            <div id="view-work" class="view-section fade-in">
+                <div class="card"><h3>Workers</h3><table id="workers-table"><thead><tr><th>Name</th><th>Phone</th><th>Score</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+            </div>
+
+            <div id="view-app" class="view-section fade-in">
+                <h3>Pending Approvals</h3>
+                <div id="approvals-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="assign-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Assign Worker</h3>
+            <select id="worker-select"></select>
+            <div class="flex mt-2"><button id="confirm-assign" class="btn w-full">Assign</button><button id="close-assign" class="btn secondary w-full">Cancel</button></div>
+        </div>
+    </div>
+    <script src="assets.js"></script>
+</body>
+</html>

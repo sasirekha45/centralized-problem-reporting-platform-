@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Worker Panel</title><link rel="stylesheet" href="assets.css"></head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <h3>Worker</h3>
+            <button id="logout-btn" class="btn secondary w-full" style="margin-top:auto;">Logout</button>
+        </aside>
+        <main class="main">
+            <header class="flex justify-between items-center mb-4">
+                <h1>Hello, <span id="worker-name-header">Worker</span></h1>
+                <button id="complain-btn" class="btn secondary">Raise Complaint</button>
+            </header>
+            <div id="worker-tasks"></div>
+        </main>
+    </div>
+
+    <div id="comp-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Report Issue</h3>
+            <textarea id="comp-desc" placeholder="Describe issue..."></textarea>
+            <label>Attach Photo/Video:</label>
+            <input type="file" id="comp-file" />
+            <div class="flex mt-2"><button id="comp-submit" class="btn w-full">Send</button><button id="comp-close" class="btn secondary w-full">Cancel</button></div>
+        </div>
+    </div>
+    <script src="assets.js"></script>
+</body>
+</html>
