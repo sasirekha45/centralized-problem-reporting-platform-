@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Centralized City Problem Reporting Platform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        :root {
+            --bg: #0d1a12;
+            --card: #14251a;
+            --header: #065f46;
+            --footer: #0a1710;
+            --accent-orange: #76431fff;
+            --accent-green: #22c55e;
+            --text: #f9fafb;
+            --muted: #9ca3af;
+            --border: #2a3f35;
+            --max-width: 1100px;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header.site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 70px;
+            background: var(--header);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .brand {
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #ea580c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+        }
+
+        main {
+            padding: 110px 5% 140px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin: 0 0 1.2rem;
+            color: var(--accent-green);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 820px;
+            margin: 0 auto 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--accent-green);
+            margin: 0 0 1.8rem;
+            text-align: center;
+        }
+
+        .features-grid, .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 70px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            color: var(--accent-orange);
+            margin: 0 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            margin: 0;
+            font-size: 1.02rem;
+        }
+
+        .how-it-works {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 70px;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+
+        .step-number {
+            background: var(--accent-orange);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 70px;
+            background: var(--footer);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.1rem; }
+            .hero p { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">Centralized City Problem Reporting Platform</div>
+    <a href="Login.html" class="btn">Get Started / Login</a>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Report City Issues Faster · Track Progress · Make Your Neighborhood Better</h1>
+        <p>A centralized, multi-category platform that empowers citizens to report non-emergency problems — from potholes and waste to streetlights and graffiti — directly to the right department, with real-time tracking and transparency.</p>
+        <a href="Login.html" class="btn" style="font-size:1.1rem; padding:14px 32px;">Report an Issue Now</a>
+    </section>
+
+    <h2 class="section-title">Why Use Our Platform?</h2>
+    <div class="features-grid">
+        <div class="card">
+            <h3>Instant Reporting</h3>
+            <p>Submit issues in seconds with photos, location auto-tagging and category selection — no more long phone calls or office visits.</p>
+        </div>
+        <div class="card">
+            <h3>Real-Time Tracking</h3>
+            <p>Follow your report's journey: Submitted → Assigned → In Progress → Resolved, with status updates and estimated resolution time.</p>
+        </div>
+        <div class="card">
+            <h3>Multi-Category Coverage</h3>
+            <p>One platform for all common city problems: roads, sanitation, lighting, water, public spaces, illegal dumping and more.</p>
+        </div>
+        <div class="card">
+            <h3>Transparent & Efficient</h3>
+            <p>Reduces duplicates, prioritizes urgent issues, and gives city officials powerful insights to allocate resources better.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">How It Works</h2>
+    <div class="how-it-works">
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <strong>Choose Category & Location</strong><br>
+                    Select the issue type and let the platform auto-detect your location (or pin it manually).
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <strong>Add Details & Proof</strong><br>
+                    Upload photos/videos, describe the problem — the more details, the faster it gets resolved.
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <strong>Submit & Track</strong><br>
+                    Your report goes directly to the responsible department. Track progress anytime in your dashboard.
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                    <strong>See the Change</strong><br>
+                    Get notified when it's fixed — contribute to a cleaner, safer city together.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Common Issue Categories</h2>
+    <div class="categories-grid">
+        <div class="card">
+            <h3>Roads & Infrastructure</h3>
+            <p>Potholes, damaged sidewalks, broken curbs, flooding</p>
+        </div>
+        <div class="card">
+            <h3>Sanitation & Waste</h3>
+            <p>Overflowing bins, uncollected garbage, illegal dumping</p>
+        </div>
+        <div class="card">
+            <h3>Street Lighting & Utilities</h3>
+            <p>Non-working streetlights, water leaks, power outages</p>
+        </div>
+        <div class="card">
+            <h3>Public Spaces</h3>
+            <p>Graffiti, damaged parks, broken benches, stray animals</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 Centralized City Problem Reporting Platform. Empowering Citizens · Building Better Cities.
+</footer>
+
+</body>
+</html>
